@@ -1,0 +1,240 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #f0f2f5;
+}
+
+.logo-1 {
+    margin-left: 3rem;
+    font-size: 2.2rem;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-link {
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #ff6b6b, #feca57);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    animation: gradientShift 8s ease infinite;
+}
+
+.logo-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.logo-link:hover {
+    transform: scale(1.03);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.logo-link:hover::before {
+    left: 100%;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#loginModal .modal-content,
+#signupModal .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+#loginModal .modal-header,
+#signupModal .modal-header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 1rem;
+    border: none;
+}
+
+#loginModal .modal-title,
+#signupModal .modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#loginModal .modal-body,
+#signupModal .modal-body {
+    padding: 3.5rem;
+    background: #f0f2f5;
+}
+
+#loginModal .form-label,
+#signupModal .form-label {
+    font-weight: 700;
+    color: #2d3436;
+}
+
+#loginModal .input-group-text,
+#signupModal .input-group-text {
+    border-radius: 20px 0 0 20px;
+    padding: 1rem 1.5rem;
+    background: #dfe6e9;
+    border: none;
+}
+
+#loginModal .form-control,
+#signupModal .form-control {
+    border-radius: 0 20px 20px 0;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: #dfe6e9;
+    transition: all 0.4s ease;
+}
+
+#loginModal .form-control:focus,
+#signupModal .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(37, 117, 252, 0.25);
+    background: #fff;
+}
+
+#loginModal .btn,
+#signupModal .btn {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    padding: 1rem 2.5rem;
+}
+
+#loginModal .btn-primary,
+#signupModal .btn-primary {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    box-shadow: 0 5px 20px rgba(37, 117, 252, 0.3);
+}
+
+#loginModal .btn-primary:hover,
+#signupModal .btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(37, 117, 252, 0.4);
+}
+
+#loginModal .btn-outline-danger,
+#loginModal .btn-outline-primary {
+    border-width: 3px;
+    font-weight: 700;
+}
+
+#loginModal .btn-outline-danger:hover,
+#loginModal .btn-outline-primary:hover {
+    transform: translateY(-3px);
+}
+
+#loginModal .modal-footer,
+#signupModal .modal-footer {
+    padding: 1rem;
+    background: #f0f2f5;
+    border: none;
+}
+
+#loginModal .modal-footer a,
+#signupModal .modal-footer a {
+    color: #2575fc;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+#loginModal .modal-footer a:hover,
+#signupModal .modal-footer a:hover {
+    color: #6a11cb;
+    text-decoration: none;
+}
+
+#loginModal .form-check-input:checked,
+#signupModal .form-check-input:checked {
+    background-color: #2575fc;
+    border-color: #2575fc;
+}
+
+#loginModal .form-check-label,
+#signupModal .form-check-label {
+    color: #6c757d;
+}
+
+#loginModal .input-group-text i,
+#signupModal .input-group-text i {
+    color: #6a11cb;
+}
+
+.fancy-title {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.fancy-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+}
+
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+.hover-link {
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #4ecdc4 !important;
+}
+
+.gradient-hr {
+    height: 3px;
+    border: none;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+}
